@@ -1,0 +1,9 @@
+Hello ${name}!
+
+Sentence: ${sentence}
+
+Escape: \${foo}
+
+Quote: "foo" 'bar'
+
+Environment variable \${USER}: ${USER}
