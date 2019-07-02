@@ -1,16 +1,18 @@
 # Lightweight template tool for Linux shell
 
-Think about `tcat` as something similar to `zcat`. `cat` prints the contents of text files; `zcat` first unzips the input files, then prints their contents; while `tcat` first replaces variables in the input template files, then prints the contents of the files.
+`tcat` means `cat` template files.
+
+Think about `tcat` as a tool similar to `zcat`. `cat` prints the contents of text files. `zcat` first unzips the input files, then prints their contents. `tcat` first replaces variables in the input template files, then prints the contents of the files.
 
 ## Usage
 
-`tcat` accepts N template files as input, where N >= 0, and writes output to STDOUT after replacing variables with their values. If no template files are specified, it reads input from STDIN.
+`tcat` accepts one ore more template files as input, and writes output to STDOUT after replacing variables with their values. If no template files are specified, it reads input from STDIN by default.
 
 ```bash
 ./tcat.sh [template-file ...]
 ```
 
-All variables in template files must be defined, otherwise the command will fail.
+All variables in template files must be defined and visible from within the script, otherwise the command will fail.
 
 ## Examples
 
@@ -26,8 +28,7 @@ Output:
 My name is functicons
 ```
 
-Note that in this example, you should use `\${USER}` instead `${USER}`;
-otherwise, the variable will be replaced by Bash before it reaches `tcat`.
+Note that in this example, we don't need to explicitly define `USER`, because it is a predefined shell environment variable. Also we should use `\${USER}` instead `${USER}`; otherwise, the variable will be replaced by Bash before it reaches `tcat`.
 
 ### Read from template files
 
