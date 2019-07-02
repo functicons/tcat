@@ -1,6 +1,6 @@
 # Lightweight template tool for Linux shell
 
-`tcat` means `cat` template files.
+`tcat` means `cat` shell template files.
 
 Think about `tcat` as a tool similar to `zcat`. `cat` prints the contents of input files. `zcat` first unzips the input files, then prints their contents. `tcat` first replaces the variable name with their values in the input template files, then prints the rendered contents.
 
@@ -9,7 +9,7 @@ Think about `tcat` as a tool similar to `zcat`. `cat` prints the contents of inp
 `tcat` accepts one ore more template files as input, and writes output to STDOUT after replacing variables with their values. If no template files are specified, it reads input from STDIN by default.
 
 ```bash
-./tcat.sh [template-file ...]
+tcat.sh [template-file ...]
 ```
 
 All variables in template files must be defined and visible from within the script, otherwise the command will fail.
