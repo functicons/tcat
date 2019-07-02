@@ -2,7 +2,7 @@
 
 `tcat` means `cat` template files.
 
-Think about `tcat` as a tool similar to `zcat`. `cat` prints the contents of text files. `zcat` first unzips the input files, then prints their contents. `tcat` first replaces variables in the input template files, then prints the contents of the files.
+Think about `tcat` as a tool similar to `zcat`. `cat` prints the contents of input files. `zcat` first unzips the input files, then prints their contents. `tcat` first replaces the variable name with their values in the input template files, then prints the rendered contents.
 
 ## Usage
 
