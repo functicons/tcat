@@ -28,7 +28,7 @@ Output:
 My name is functicons
 ```
 
-Note that in this example, we don't need to explicitly define `USER`, because it is a predefined shell environment variable. Also we should use `\${USER}` instead `${USER}`; otherwise, the variable will be replaced by Bash before it reaches `tcat`.
+Note that in this example, we don't need to explicitly define `USER`, because it is a predefined shell environment variable. Also we should use `\${USER}` instead `${USER}`; otherwise, the variable will be replaced by `echo` before it reaches `tcat`.
 
 ### Read from template files
 
